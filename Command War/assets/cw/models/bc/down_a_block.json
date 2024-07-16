@@ -1,0 +1,6 @@
+{
+    "parent": "cw:bc/parents/chain",
+    "textures": {
+      "layer0": "cw:bc/down_a_block"
+    }
+}

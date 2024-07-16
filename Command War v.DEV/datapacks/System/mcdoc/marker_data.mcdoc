@@ -1,0 +1,51 @@
+use::custom_data::bc_compressed
+use::bc_tree::bc_tree
+
+struct editor_legal{
+    main: [byte] @ 8,
+    top?: [byte] @ 8,
+    bottom?: [byte] @ 8,
+}
+
+enum(string) compile_type{
+    Error = "ERROR",
+    Warning = "warning",
+    Attention = "attention",
+    Normal = "normal",
+    Void = "VOID"
+}
+
+enum(string) node_type{
+    Node = "node",
+    Head = "head",
+    End = "end",
+    Single = "single"
+}
+
+struct parse_result{
+    use_model?: int @ 1..50,
+    compile_type: compile_type,
+    node_type: node_type,
+    elements: struct{
+        top?: verticle_element,
+        main: verticle_element,
+        bottom?: verticle_element,
+    },
+    order: int @ 0..
+}
+
+struct verticle_element{
+    bc_info: bc_compressed,
+    compile_type: compile_type,
+}
+
+dispatch mcdoc:marker_data["editor"] to struct {
+    has_wand?: byte @ 0..2,
+    legal?: struct{
+        ...editor_legal
+    },
+    shift?: byte @ 0..,
+    stored_bc?: bc_tree,
+    has_error?: byte @ 0..1,
+    parse?: [parse_result]
+}

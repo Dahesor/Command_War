@@ -1,0 +1,7 @@
+use::custom_data::bc_compressed
+
+struct bc_tree{
+        main?: [(struct{}|bc_compressed)],
+        top?: [(struct{}|bc_compressed)],
+        bottom?: [(struct{}|bc_compressed)],
+}

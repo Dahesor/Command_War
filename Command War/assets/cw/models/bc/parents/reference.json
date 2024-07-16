@@ -1,0 +1,6 @@
+{
+    "parent": "cw:bc/parents/root",
+    "textures": {
+      "frame": "cw:bc/frames/reference"
+    }
+}

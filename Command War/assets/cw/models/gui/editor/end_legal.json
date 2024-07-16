@@ -1,0 +1,6 @@
+{
+    "parent": "cw:gui/editor/root",
+    "textures": {
+      "layer0": "cw:gui/editor/end_legal"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+      "layer0": "minecraft:item/white_dye"
+    },
+    "overrides": [
+      {"predicate": {"custom_model_data": 1},"model": "cw:gui/editor/error"},
+      {"predicate": {"custom_model_data": 2},"model": "cw:gui/editor/wire"},
+      {"predicate": {"custom_model_data": 3},"model": "cw:gui/editor/void_single"},
+      {"predicate": {"custom_model_data": 4},"model": "cw:gui/editor/void_start"},
+      {"predicate": {"custom_model_data": 5},"model": "cw:gui/editor/void_end"},
+      {"predicate": {"custom_model_data": 6},"model": "cw:gui/editor/void_node"},
+      {"predicate": {"custom_model_data": 11},"model": "cw:gui/editor/single_legal"},
+      {"predicate": {"custom_model_data": 12},"model": "cw:gui/editor/head_legal"},
+      {"predicate": {"custom_model_data": 13},"model": "cw:gui/editor/node_legal"},
+      {"predicate": {"custom_model_data": 14},"model": "cw:gui/editor/end_legal"},
+      {"predicate": {"custom_model_data": 21},"model": "cw:gui/editor/single_attention"},
+      {"predicate": {"custom_model_data": 22},"model": "cw:gui/editor/head_attention"},
+      {"predicate": {"custom_model_data": 23},"model": "cw:gui/editor/node_attention"},
+      {"predicate": {"custom_model_data": 24},"model": "cw:gui/editor/end_attention"},
+      {"predicate": {"custom_model_data": 31},"model": "cw:gui/editor/single_warning"},
+      {"predicate": {"custom_model_data": 32},"model": "cw:gui/editor/head_warning"},
+      {"predicate": {"custom_model_data": 33},"model": "cw:gui/editor/node_warning"},
+      {"predicate": {"custom_model_data": 34},"model": "cw:gui/editor/end_warning"}
+    ]
+}

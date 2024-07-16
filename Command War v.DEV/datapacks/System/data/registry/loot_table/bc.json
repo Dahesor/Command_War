@@ -1,0 +1,158 @@
+{
+    "type": "command",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "value": "registry:bc_raw"
+                }
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "function": "set_custom_model_data",
+            "value": {
+                "type": "score",
+                "target": {
+                    "type": "fixed",
+                    "name": "#CustomModelData"
+                },
+                "score": "registry",
+                "scale": 1
+            }
+        },
+        {
+            "function": "set_name",
+            "entity": "this",
+            "name": {"storage": "registry","nbt":"ram.name","interpret": true}
+        },
+        {
+            "function": "copy_custom_data",
+            "source": {
+                "type": "storage",
+                "source": "registry"
+            },
+            "ops": [
+                {
+                    "op": "merge",
+                    "source": "ram.data",
+                    "target": "bc"
+                }
+            ]
+        },
+        {
+            "function": "set_custom_data",
+            "tag": "{bc:{initialized:1b},be_in_editor:1b,in_editor:0b}"
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "replace_all",
+            "lore": [
+                {"storage": "registry","nbt":"ram.slogan_json[1]","interpret": true},
+                "",
+                {"storage": "registry","nbt":"ram.slogan_json[2]","interpret": true},
+                {"storage": "registry","nbt":"ram.lines[0]","interpret": true}
+            ]
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "append",
+            "lore": [{"storage": "registry","nbt":"ram.lines[1]","interpret": true}],
+            "conditions": [{
+                "condition": "value_check",
+                "value": {
+                    "type": "score","target": {"type": "fixed","name": "#abs"},"score": "calculator"},
+                    "range": {"min":2}
+            }]
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "append",
+            "lore": [{"storage": "registry","nbt":"ram.lines[2]","interpret": true}],
+            "conditions": [{
+                "condition": "value_check",
+                "value": {
+                    "type": "score","target": {"type": "fixed","name": "#abs"},"score": "calculator"},
+                    "range": {"min":3}
+            }]
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "append",
+            "lore": [{"storage": "registry","nbt":"ram.lines[3]","interpret": true}],
+            "conditions": [{
+                "condition": "value_check",
+                "value": {
+                    "type": "score","target": {"type": "fixed","name": "#abs"},"score": "calculator"},
+                    "range": {"min":4}
+            }]
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "append",
+            "lore": [{"storage": "registry","nbt":"ram.lines[4]","interpret": true}],
+            "conditions": [{
+                "condition": "value_check",
+                "value": {
+                    "type": "score","target": {"type": "fixed","name": "#abs"},"score": "calculator"},
+                    "range": {"min":5}
+            }]
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "append",
+            "lore": [{"storage": "registry","nbt":"ram.lines[5]","interpret": true}],
+            "conditions": [{
+                "condition": "value_check",
+                "value": {
+                    "type": "score","target": {"type": "fixed","name": "#abs"},"score": "calculator"},
+                    "range": {"min":6}
+            }]
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "append",
+            "lore": [{"storage": "registry","nbt":"ram.lines[6]","interpret": true}],
+            "conditions": [{
+                "condition": "value_check",
+                "value": {
+                    "type": "score","target": {"type": "fixed","name": "#abs"},"score": "calculator"},
+                    "range": {"min":7}
+            }]
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "append",
+            "lore": [{"storage": "registry","nbt":"ram.lines[7]","interpret": true}],
+            "conditions": [{
+                "condition": "value_check",
+                "value": {
+                    "type": "score","target": {"type": "fixed","name": "#abs"},"score": "calculator"},
+                    "range": {"min":8}
+            }]
+        },
+        {
+            "function": "set_lore",
+            "entity": "this",
+            "mode": "append",
+            "lore": [{"storage": "registry","nbt":"ram.lines[8]","interpret": true}],
+            "conditions": [{
+                "condition": "value_check",
+                "value": {
+                    "type": "score","target": {"type": "fixed","name": "#abs"},"score": "calculator"},
+                    "range": {"min":9}
+            }]
+        }
+    ]
+}

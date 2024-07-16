@@ -1,0 +1,39 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+      "layer0": "cw:bc/frames/bc_default"
+    },
+    "overrides": [
+      {"predicate": {"custom_model_data": 1},"model": "cw:bc/parents/action"},
+      {"predicate": {"custom_model_data": 2},"model": "cw:bc/parents/fast"},
+      {"predicate": {"custom_model_data": 3},"model": "cw:bc/parents/chain"},
+      {"predicate": {"custom_model_data": 4},"model": "cw:bc/parents/modify"},
+      {"predicate": {"custom_model_data": 5},"model": "cw:bc/parents/fork"},
+      {"predicate": {"custom_model_data": 6},"model": "cw:bc/parents/jump"},
+      {"predicate": {"custom_model_data": 7},"model": "cw:bc/parents/reference"},
+      {"predicate": {"custom_model_data": 8},"model": "cw:bc/parents/trigger"},
+      {"predicate": {"custom_model_data": 9},"model": "cw:bc/parents/insert"},
+      {"predicate": {"custom_model_data": 10},"model": "cw:bc/parents/condition"},
+      {"predicate": {"custom_model_data": 11},"model": "cw:bc/parents/multi"},
+      {"predicate": {"custom_model_data": 12},"model": "cw:bc/parents/func"},
+      {"predicate": {"custom_model_data": 13},"model": "cw:bc/parents/root"},
+      
+      {"predicate": {"custom_model_data": 101},"model": "cw:bc/place_glass"},
+      
+      {"predicate": {"custom_model_data": 201},"model": "cw:bc/place_glass_pane"},
+
+      {"predicate": {"custom_model_data": 301},"model": "cw:bc/up_a_block"},
+      {"predicate": {"custom_model_data": 302},"model": "cw:bc/block_forward"},
+      {"predicate": {"custom_model_data": 303},"model": "cw:bc/down_a_block"},
+      {"predicate": {"custom_model_data": 304},"model": "cw:bc/facing_sky"},
+      {"predicate": {"custom_model_data": 305},"model": "cw:bc/as_player"},
+      {"predicate": {"custom_model_data": 306},"model": "cw:bc/at_player"},
+      {"predicate": {"custom_model_data": 307},"model": "cw:bc/at_self"},
+      {"predicate": {"custom_model_data": 308},"model": "cw:bc/at_start_pos"},
+
+
+      {"predicate": {"custom_model_data": 801},"model": "cw:bc/planck_time"},
+
+      {"predicate": {"custom_model_data": 1001},"model": "cw:bc/player_near"}
+    ]
+}

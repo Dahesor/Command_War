@@ -1,0 +1,2 @@
+function cmd:editor/foolproof/return_item
+function cmd:editor/initialization/null_backgrounds

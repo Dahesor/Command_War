@@ -1,0 +1,15 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+      "layer0": "minecraft:item/barrier"
+    },
+    "overrides": [
+      {"predicate": {"custom_model_data": 1},"model": "cw:background"},
+      {"predicate": {"custom_model_data": 2},"model": "cw:background_dark"},
+      {"predicate": {"custom_model_data": 3},"model": "cw:gui/wand_box"},
+      {"predicate": {"custom_model_data": 4},"model": "cw:gui/confirm"},
+      {"predicate": {"custom_model_data": 5},"model": "cw:gui/confirm_disable"},
+      {"predicate": {"custom_model_data": 6},"model": "cw:gui/cancel"},
+      {"predicate": {"custom_model_data": 7},"model": "cw:gui/cancel_disable"}
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "type": "command",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "warped_fungus_on_a_stick"
+                }
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "function": "set_name",
+            "name": {"translate": "wand.name.generic","color": "gold","italic": false}
+        },
+        {
+            "function": "set_custom_model_data",
+            "value": {
+                "type": "score",
+                "target": {
+                    "type": "fixed",
+                    "name": "#CustomModelData"
+                },
+                "score": "registry",
+                "scale": 1
+            }
+        },
+        {
+            "function": "copy_custom_data",
+            "source": {
+                "type": "storage",
+                "source": "registry"
+            },
+            "ops": [
+                {
+                    "op": "replace",
+                    "source": "wand",
+                    "target": "wand"
+                }
+            ]
+        },
+        {
+            "function": "set_custom_data",
+            "tag": "{be_in_editor:1b,in_editor:0b}"
+        }
+    ]
+}

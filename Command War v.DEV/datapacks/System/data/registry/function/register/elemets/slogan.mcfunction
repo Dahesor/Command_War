@@ -1,0 +1,4 @@
+$data modify storage registry new.slogan_json append value '[{"text":"[","color": "$(type_color)","italic": false},{"translate": "bc.type.name","with":[{"translate": "bc.type.$(type).name","color": "$(type_color)","italic": false}]},"]  ",{"text": "$(slogan)","color": "dark_gray","italic": false}]'
+
+$data modify storage registry new.slogan_json append value '{"text": "$(slogan)","color": "dark_gray","italic": false}'
+$data modify storage registry new.slogan_json append value '[{"text":"[","color": "$(type_color)","italic": false},{"translate": "head.type","with":[{"translate": "bc.type.$(type).name","color": "$(type_color)","italic": false}]},"]"]'

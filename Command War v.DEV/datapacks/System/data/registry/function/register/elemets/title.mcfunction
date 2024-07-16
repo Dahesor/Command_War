@@ -1,0 +1,1 @@
+$data modify storage registry new.name set value '{"translate":"bc.$(type).$(id)","color": "$(color)","italic": false}'

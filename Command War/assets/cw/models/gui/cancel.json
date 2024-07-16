@@ -1,0 +1,6 @@
+{
+    "parent": "cw:background_dark",
+    "textures": {
+      "layer0": "cw:gui/cancel"
+    }
+}

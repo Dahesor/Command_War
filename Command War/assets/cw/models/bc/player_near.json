@@ -1,0 +1,6 @@
+{
+    "parent": "cw:bc/parents/condition",
+    "textures": {
+      "layer0": "cw:bc/player_near"
+    }
+}

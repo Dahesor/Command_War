@@ -1,0 +1,1 @@
+data modify storage ram listbc set from entity @s data.editor.stored_bc.main

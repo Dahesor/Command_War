@@ -1,0 +1,1 @@
+execute as @e[type=marker,tag=editor] at @s run function cmd:editor/kill

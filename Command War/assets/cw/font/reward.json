@@ -1,0 +1,17 @@
+{
+    "providers": [
+        {
+            "type": "reference",
+            "id": "cw:space"
+        },
+        {
+            "type": "bitmap",
+            "file": "cw:gui/screen/tall.png",
+            "height": 200,
+            "ascent": 35,
+            "chars": [
+                "\ue003"
+            ]
+        }
+    ]
+}

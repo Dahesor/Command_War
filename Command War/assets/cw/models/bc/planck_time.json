@@ -1,0 +1,6 @@
+{
+    "parent": "cw:bc/parents/trigger",
+    "textures": {
+      "layer0": "cw:bc/planck_time"
+    }
+}

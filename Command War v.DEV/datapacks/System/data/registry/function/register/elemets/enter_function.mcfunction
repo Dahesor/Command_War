@@ -1,0 +1,1 @@
+$data modify storage registry new.enter set value "registry:$(type)/$(id)/enter"

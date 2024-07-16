@@ -1,0 +1,12 @@
+{
+    "entity.player.hurt_freeze":{
+        "replace":true,
+        "subtitle":"",
+        "sounds":[]
+    },
+    "item.armor.equip_generic":{
+        "replace":true,
+        "subtitle":"",
+        "sounds":[]
+    }
+}

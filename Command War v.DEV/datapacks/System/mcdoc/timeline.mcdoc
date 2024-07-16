@@ -1,0 +1,7 @@
+struct timeline{
+    at: int @ -1..,
+    target?: int @ -1..,
+    type: enum(string){
+    PlayerNext = "PLAYER_NEXT"
+    }
+}

@@ -1,0 +1,55 @@
+use::registry::bc_type
+use::registry::bc_sub_type
+use::marker_data::editor_legal
+use::marker_data::parse_result
+use::bc_tree::bc_tree
+
+dispatch mcdoc:custom_data["UISpaceHolder"] to byte @ 1..2
+dispatch mcdoc:custom_data["ui"] to struct{id?:any}
+dispatch mcdoc:custom_data["from_ui"] to byte @ 1..2
+dispatch mcdoc:custom_data["returned_item"] to byte @ 1..2
+dispatch mcdoc:custom_data["be_in_editor"] to byte @ 1..2
+dispatch mcdoc:custom_data["in_editor"] to byte @ 0..1
+dispatch mcdoc:custom_data["bc"] to struct{
+    initialized?: byte @ 0..1,
+    type?: bc_type,
+    id?: string,
+    enter?: #[id(registry="function")] string,
+    differ?: int
+}
+
+struct bc_compressed{
+    type: bc_type,
+    subtype?: bc_sub_type,
+    id: string,
+    differ?: int
+}
+
+enum(string) wand_type{
+    /// Can be edit by player
+    Normal = "NORMAL",
+    /// Cannot be edit
+    Fixed = "FIXED",
+    /// Wand that could not be edit, but can now
+    Fixed_Edit = "FIXED_EDIT"
+}
+
+struct wand_data{
+    initialized?: byte @ 0..1,
+    slot?: byte @ 1..,
+    type?: wand_type,
+    contents?: bc_tree,
+    model?: int
+}
+
+dispatch mcdoc:custom_data["wand"] to wand_data
+
+dispatch minecraft:storage["ram"] to struct{
+    wand?: wand_data,
+    legal?: struct{
+        ...editor_legal,
+        this: byte
+    },
+    bc?: bc_compressed,
+    listbc?: [(struct{}|bc_compressed|struct{void:byte})]
+}

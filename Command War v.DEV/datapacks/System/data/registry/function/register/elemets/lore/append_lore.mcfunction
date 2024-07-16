@@ -1,0 +1,2 @@
+$execute if score target registry matches 1 run return run data modify storage registry new.lore append value '{"translate":"bc.$(type).$(id).lore.$(this)","color":"white","italic":false$(with)}'
+$data modify storage registry new.story append value '{"translate":"bc.$(type).$(id).story.$(this)","color":"gray","italic":true$(with)}'

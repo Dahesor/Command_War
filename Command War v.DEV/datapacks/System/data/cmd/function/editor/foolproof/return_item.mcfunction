@@ -1,0 +1,1 @@
+execute if function cmd:editor/foolproof/check_for_item run return run function cmd:editor/foolproof/return_item_loop

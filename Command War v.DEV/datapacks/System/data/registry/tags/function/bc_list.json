@@ -1,0 +1,16 @@
+{
+    "values": [
+        "registry:action/place_glass/declare",
+        "registry:fast/place_glass_pane/declare",
+        "registry:chain/up_a_block/declare",
+        "registry:chain/block_forward/declare",
+        "registry:chain/down_a_block/declare",
+        "registry:chain/facing_sky/declare",
+        "registry:chain/as_player/declare",
+        "registry:chain/at_player/declare",
+        "registry:chain/at_self/declare",
+        "registry:chain/at_start_pos/declare",
+        "registry:condition/player_near/declare",
+        "registry:trigger/planck_time/declare"
+    ]
+}

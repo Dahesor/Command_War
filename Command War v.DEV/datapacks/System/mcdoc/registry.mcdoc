@@ -1,0 +1,119 @@
+use::custom_data::wand_data
+
+enum(string) rarity_color{
+        red = "red",
+        gold = "gold",
+        green = "green",
+        aqua = "aqua",
+        dark_purple = "dark_purple"
+    }
+
+
+enum(string) bc_type{
+    Modification = "modify",
+    Action = "action",
+    Insertion = "insert",
+    Forking = "fork",
+    Fast = "fast",
+    Trigger = "trigger",
+    Jumper = "jump",
+    Reference = "reference",
+    Chain = "chain",
+    Condition = "condition",
+    Function = "func",
+    Multiple = "multi",
+    Other = "other"
+}
+
+enum(string) bc_sub_type{
+        positioned = "positioned",
+        at = "at",
+        facing = "facing",
+        rotation = "rotated",
+        as = "as",
+        setblock = "setblock",
+        time = "time"
+    }
+
+enum(string) type_color{
+    action = "red",
+    fast = "gold",
+    chain = "green",
+    modify = "blue",
+    fork = "light_purple",
+    jump = "dark_aqua",
+    reference = "#b4684d",
+    trigger = "yellow",
+    insert = "?",
+    condition = "dark_purple",
+    multi = "aqua",
+    func = "#eaeaea",
+    other = "#515151"
+}
+
+struct spell_lore{
+    with?: [struct{
+        type: enum(string){
+            Constant = "const",
+            Translation_Key = "key"
+        },
+        name: string,
+        more?: string
+    }]
+}
+
+struct block_command{
+    id: string,
+    model: int @ 1..,
+    mp_cost: int,
+    rarity: int,
+    type: bc_type,
+    color?: rarity_color,
+    type_color?: type_color,
+    sub_type?: bc_sub_type,
+    lore: [spell_lore],
+    story?: [spell_lore],
+    slogan: string
+}
+
+struct registered_cb{
+    id: string,
+    model: int @ 1..,
+    mp_cost: int,
+    rarity: int,
+    type: bc_type,
+    color?: rarity_color,
+    sub_type?: bc_sub_type,
+    enter: #[id(registry="function")] string,
+    name: #[text_component] string,
+    lore: [#[text_component] string],
+    story?: [#[text_component] string],
+    slogan: string,
+    slogan_json: [#[text_component] string] @ ..3,
+    lines?: [#[text_component] string],
+    data?:struct{
+        type: bc_type,
+        id: string,
+        enter: #[id(registry="function")] string,
+        differ?: int
+    }
+}
+
+dispatch minecraft:storage["registry"] to struct{
+    load?: block_command,
+    new?: registered_cb,
+    bc_list: [string],
+    abs?: any,
+    run?: any,
+    key?: string,
+    temp?: any,
+    abs2?: any,
+    entry?: struct{
+        id?: string,
+        type?: string,
+    },
+    bc: [block_command],
+    id?: (string|struct{id:string}),
+    ram?: registered_cb,
+    wand?: wand_data
+}

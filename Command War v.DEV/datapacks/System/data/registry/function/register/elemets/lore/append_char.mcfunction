@@ -1,0 +1,1 @@
+$data modify storage registry key set value '$(key)$(char)'

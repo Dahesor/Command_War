@@ -1,0 +1,6 @@
+{
+    "parent": "cw:bc/parents/fast",
+    "textures": {
+      "layer0": "cw:bc/place_glass_pane"
+    }
+}

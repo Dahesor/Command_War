@@ -1,0 +1,27 @@
+use::timeline::timeline
+
+struct abs{
+    UID?: int @ -1..
+}
+
+struct player{
+    UID?: int @ -1..,
+    attributes?: struct {
+
+    },
+    status?: [any],
+    next_move?: struct {
+        time?: int @ 0..,
+    },
+}
+
+dispatch minecraft:storage["vm"] to struct {
+    player?:[player],
+    abs?: (any|abs),
+    temp?: any,
+    ram?: (any|timeline),
+    run?: any,
+    insert?: timeline,
+    timeline?:[timeline],
+    id?: string
+}
